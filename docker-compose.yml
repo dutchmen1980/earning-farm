@@ -1,0 +1,142 @@
+version: "3.9"
+
+services:
+  honeygain:
+    image: honeygain/honeygain
+    container_name: hg_1
+    command: -tou-accept -email ${HG_EMAIL} -pass ${HG_PASS} -device hg_1
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  peer2profit:
+    image: enwaiax/peer2profit:latest
+    container_name: p2p_1
+    environment:
+      - email=${P2P_EMAIL}
+      - use_proxy=false
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  earnapp:
+    image: fazalfarhan01/earnapp:lite
+    container_name: earnapp_1
+    environment:
+      - EARNAPP_UUID=${EARNAPP_UUID}
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  psclient:
+    image: packetstream/psclient:latest
+    container_name: psclient_1
+    environment:
+      - CID=${PS_CID}
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  pawns:
+    image: iproyal/pawns-cli:latest
+    container_name: pawns_1
+    command: -email=${PAWNS_EMAIL} -password=${PAWNS_PASS} -device-name=pawns_1 -accept-tos
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  bitping:
+    image: bitping/bitping-node:latest
+    container_name: bitping_1
+    volumes:
+      - ./data/bitping:/root/.bitping
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  traffmonetizer:
+    image: traffmonetizer/cli_v2:latest
+    container_name: traffmonetizer_1
+    command: start accept --token ${TM_TOKEN}
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  repocket:
+    image: repocket/repocket:latest
+    container_name: repocket_1
+    environment:
+      - RP_EMAIL=${RP_EMAIL}
+      - RP_API_KEY=${RP_KEY}
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  proxylite:
+    image: proxylite/proxyservice:latest
+    container_name: proxylite_1
+    environment:
+      - USER_ID=${PROXYLITE_ID}
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  proxyrack:
+    image: proxyrack/pop:latest
+    container_name: proxyrack_1
+    environment:
+      - api_key=${PROXYRACK_KEY}
+      - device_name=node_1
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  earnfm:
+    image: earnfm/earnfm-client:latest
+    container_name: earnfm_1
+    environment:
+      - EARNFM_TOKEN=${EARNFM_TOKEN}
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  watchtower_earnfm:
+    image: containrrr/watchtower
+    container_name: watchtower_earnfm
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --cleanup --include-stopped --include-restarting --revive-stopped --interval 300 earnfm_1
