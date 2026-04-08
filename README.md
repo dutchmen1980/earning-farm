@@ -1,8 +1,11 @@
+⭐ Star this repo if it helps you
+🍴 Fork it to run your own earning farm
+
 # Earning Farm
 
 ## 💸 Start earning in 5 minutes → Scroll down 👇
 
-Turn your unused internet bandwidth into passive income.
+Turn your unused internet into real passive income — automatically.
 
 Run multiple earning apps in one Docker setup. Set it once. Let it run. Get paid.
 
@@ -17,6 +20,9 @@ Earning Farm is a lightweight Docker stack that runs multiple passive income ser
 Instead of installing apps one by one, you run everything together.
 
 More apps = more earning potential.
+
+💡 Realistically: expect a few dollars per day depending on your setup.
+Scale it with multiple devices and uptime.
 
 ---
 
@@ -109,6 +115,11 @@ PASSIVEAPP_TOKEN=your_token
 
 ```
 docker compose up -d
+```
+
+If that doesn’t work, try:
+```
+docker-compose up -d
 ```
 
 ---
