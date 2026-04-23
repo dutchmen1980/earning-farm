@@ -177,6 +177,6 @@ More uptime = more earnings.
 This project uses third-party services.
 
 Some links above are affiliate links. 
-You don’t pay extra, but it helps support development.
+It doesn't cost you anything, but it helps us support development.
 
 Use at your own risk.
