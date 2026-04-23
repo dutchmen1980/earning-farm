@@ -35,33 +35,19 @@ Scale it with multiple devices and uptime.
 
 ---
 
-## 💰 Supported Platforms
-
-- EarnApp
-- Earn.fm
-- Honeygain
-- Pawns
-- PacketStream
-- Repocket
-- TrafficMonetizer
-- ProxyLite
-- PassiveApp
-
----
-
 ## 🚀 Get Started (Recommended)
 
 Create your accounts first before running the stack:
 
-- 👉 [Start earning with EarnApp](https://earnapp.com/i/6tW3Z5Tn)
-- 👉 [Register on Earn.fm](https://earn.fm/ref/DUTCSXVU)
-- 👉 [Join Honeygain](https://join.honeygain.com/RVAND9FFAC)
-- 👉 [Create account on Pawns](https://pawns.app/?r=19431665)
-- 👉 [Sign up for PacketStream](https://packetstream.io/?psr=7yzQ)
-- 👉 [Join Repocket](https://link.repocket.com/1E37)
-- 👉 [Start with TrafficMonetizer](https://traffmonetizer.com/?aff=2118907)
-- 👉 [Register ProxyLite](https://proxylite.ru/?r=HMZKAC8F)
-- 👉 [Join PassiveApp](https://passiveapp.com/i/nOWy2E)
+- 👉 [EarnApp](https://earnapp.com/i/6tW3Z5Tn)
+- 👉 [Earn.fm](https://earn.fm/ref/DUTCSXVU)
+- 👉 [Honeygain](https://join.honeygain.com/RVAND9FFAC)
+- 👉 [Pawns](https://pawns.app/?r=19431665)
+- 👉 [PacketStream](https://packetstream.io/?psr=7yzQ)
+- 👉 [Repocket](https://link.repocket.com/1E37)
+- 👉 [TrafficMonetizer](https://traffmonetizer.com/?aff=2118907)
+- 👉 [ProxyLite](https://proxylite.ru/?r=HMZKAC8F)
+- 👉 [PassiveApp](https://passiveapp.com/i/nOWy2E)
 
 ⚡ Tip: The more platforms you activate, the higher your total earnings.
 
