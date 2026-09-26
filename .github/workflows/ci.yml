@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Shell syntax
+        shell: bash
+        run: |
+          find . -name "*.sh" -print0 |
+            xargs -0 -r -n1 bash -n
+      - name: Compose configuration
+        shell: bash
+        env:
+          HG_EMAIL: ci@example.invalid
+          HG_PASS: ci-placeholder
+          P2P_EMAIL: ci@example.invalid
+          EARNAPP_UUID: 00000000-0000-0000-0000-000000000000
+          PS_CID: ci-placeholder
+          PAWNS_EMAIL: ci@example.invalid
+          PAWNS_PASS: ci-placeholder
+          TM_TOKEN: ci-placeholder
+          RP_EMAIL: ci@example.invalid
+          RP_KEY: ci-placeholder
+          PROXYLITE_ID: ci-placeholder
+          PROXYRACK_KEY: ci-placeholder
+          EARNFM_TOKEN: ci-placeholder
+        run: docker compose config -q
