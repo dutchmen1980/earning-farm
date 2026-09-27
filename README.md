@@ -148,7 +148,7 @@ Do your own research before using any platform
 
 Run this on:
 
-NAS (for example Synology)
+pnldeb02 (staging) / prod-docker-01 (prod)
 
 VPS (cheap Linux server)
 
